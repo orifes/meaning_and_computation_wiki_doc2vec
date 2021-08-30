@@ -20,3 +20,10 @@ for doc_title in doc_model.docvecs.offset2doctag:
 
 with open("words_we_have.pkl", "wb") as f:
     pkl.dump(words, f)
+
+with open("w2v_vecs_we_have.pkl", "wb") as f:
+    pkl.dump(words, f)
+
+with open("d2v_vecs_we_have.pkl", "wb") as f:
+    pkl.dump(words, f)
+

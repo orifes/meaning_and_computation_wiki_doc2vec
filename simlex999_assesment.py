@@ -37,6 +37,9 @@ word_corr, word_p_val = stats.pearsonr(pairs_we_have["SimLex999"], pairs_we_have
 # Finding examples of simlex pairs that share a word in order to asses the relative simlex999 similarity and
 # word or document similarities
 
-has_more_than_one_appearance = (pd.concat([pairs_we_have.word1,pairs_we_have.word2]).value_counts() > 1
-num_of_words_with_triplets = has_more_than_one_apperance.sum()
-words_with_triplets = list(has_more_than_one_apperance[:num_of_words_with_triplets].index)
+has_more_than_one_appearance = pd.concat([pairs_we_have.word1, pairs_we_have.word2]).value_counts() > 1
+num_of_words_with_triplets = has_more_than_one_appearance.sum()
+words_with_triplets = list(has_more_than_one_appearance[:num_of_words_with_triplets].index)
+
+# Plotting the "cat" triplet result
+print(pairs_we_have[pairs_we_have.word1 == "cat"])
